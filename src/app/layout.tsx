@@ -1,7 +1,8 @@
+import Navbar from "@/components/Navbar";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -16,14 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased dark",
-          inter.variable
+          inter.variable,
         )}
       >
+        <Navbar />
         {children}
       </body>
     </html>
