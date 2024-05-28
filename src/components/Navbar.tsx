@@ -14,17 +14,13 @@ interface ComponentProps {
   href: string;
 }
 
-const components: ComponentProps[] = [
-  { title: "Home", href: "/" },
-  { title: "Shoots", href: "/shoots" },
-  { title: "Book", href: "/create" },
-];
+const components: ComponentProps[] = [{ title: "Home", href: "/" }];
 
 export default function Navbar() {
   return (
     <div className="flex flex-row">
       <NavigationMenu className="py-4 gap-x-4 justify-between min-w-full">
-		<Image src="/logo.svg" alt="logo" height={100} width={100} />
+        <Image src="/logo.svg" alt="logo" height={100} width={100} />
         <NavigationMenuList>
           {components.map((component) => {
             return (
